@@ -1,0 +1,50 @@
+<html>
+<head>
+    <title>login</title>
+</head>
+
+
+
+    <title>Task Management System</title>
+    <style>
+        body {
+            text-align: center;
+            background: url('"C:\Users\Y Prem\Downloads\python end sem.jpg"') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        h3 {
+            color: #000080;
+        }
+
+        div {
+            background: rgba(255, 255, 255, 0.8); /* Adjust the alpha (last value) for transparency */
+            padding: 20px;
+            border-radius: 10px;
+            margin: 50px auto; /* Centers the div */
+            max-width: 400px; /* Adjust the width as needed */
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            background-color: #4CAF50; /* Green background color */
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+
+<body>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Submit" name="login" />
+
+    <br><br>
+    </form>
+    <button onclick="window.location.href = '/accounts/register';">Create account</button>
+
+</body>
+</html>
